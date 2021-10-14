@@ -1,0 +1,47 @@
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+
+using namespace std;
+
+int mohit_mostatil(int  , int  );
+int masahat_mostatil(int , int  );
+
+int main()
+{
+    int tool , arz , mohit , masahat ;
+    char cn;
+    while(1)
+    {
+        cout<< "Tool mostatil ra vared konid = ";
+        cin>>tool;
+        cout<< "Areze mostatil ra vared konid = ";
+        cin>> arz;
+        mohit = mohit_mostatil(tool,arz);
+        masahat = masahat_mostatil(tool,arz);
+        cout<<"mohit: "<<mohit<<endl;
+        cout<< "masahat : "<< masahat<<endl;
+        cout<< "Edame Midahaid ? y/n"<<endl;
+        cin>>cn;
+        if(cn=='n')
+            break;
+    }
+
+    getch();
+}
+
+int mohit_mostatil(int a , int b )
+{
+    int mohit_mostatil_natije;
+    mohit_mostatil_natije = (a+b)*2;
+    return mohit_mostatil_natije;
+
+}
+
+int masahat_mostatil(int a , int b )
+{
+    int masahat_mostatil_natije;
+    masahat_mostatil_natije = a*b;
+    return masahat_mostatil_natije;
+
+}
